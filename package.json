@@ -4,13 +4,8 @@
   "homepage": "https://roopabdr.github.io/world-clock/",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "autosuggest-highlight": "^3.1.1",
     "gh-pages": "^2.0.1",
-    "lodash.deburr": "^4.1.0",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-autosuggest": "^9.4.3",
     "react-dom": "^16.8.6",
     "react-particles-js": "^2.5.1",
     "react-scripts": "2.1.8"
