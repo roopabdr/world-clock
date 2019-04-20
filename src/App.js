@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-import Autosuggestion from './components/Autosuggestion';
+import spacetime from 'spacetime';
+import Autosuggestion from './components/Autosuggestion/Autosuggestion';
 import './App.css';
 
 const particleOptions = {
@@ -22,12 +23,29 @@ const particleOptions = {
   }
 };
 
-class App extends Component {  
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      locName: '',
+    }
+  }
+
+  onLocName = (loc) => {
+    this.setState({locName: loc});
+  };
+
+  onAddClockClick = () => {
+    console.log('Adding Clock', this.state.locName);
+  };
+
   render() {
     return (
       <div className='App'>
         <Particles className='particles' params={particleOptions}/>
-        <Autosuggestion />
+        <Autosuggestion onLocName={this.onLocName}/>
+        <button className='butn' onClick={this.onAddClockClick}>Add Clock</button>
+        <h1>{spacetime.now().format('nice')}</h1>
       </div>
     );
   }

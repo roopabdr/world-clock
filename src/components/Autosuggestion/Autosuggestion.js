@@ -39,26 +39,23 @@ import './Autosuggestion.css';
 ];*/
 
 class Autosuggestion extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
       locationName: ''
 		};
 	}
 
-  onAddClockClick = () => {
-    console.log('Adding Clock',this.state.locationName);
-  };
-
-  onInputChange = (event) => {
-    this.setState({locationName: event.target.value});
-  };
+  /*onInputChange = (event) => {
+    // this.setState({locationName: event.target.value});
+    this.props.onLocName(event.target.value);
+  };*/
 
 	render() {
+    const { onLocName } = this.props; 
 		return (
 			<div className='autoSuggestion'>
-        <input type='text' className='inputText' placeholder='Enter location name...' onChange={this.onInputChange}/>
-        <button className='butn' onClick={this.onAddClockClick}>Add Clock</button>
+        <input type='text' className='inputText' placeholder='Enter location name...' onChange={ (event) => onLocName(event.target.value) }/>
 			</div>
 		);
 	}
