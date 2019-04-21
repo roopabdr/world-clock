@@ -1,8 +1,11 @@
 .card {
-	display: inline-block;
+	display: flex;
 	margin: 10px;
 	border: 1px solid #eee;
-	box-shadow: 2px 2px 2px #ccc;
+	box-shadow: 1px 5px 3px #bfbfbf;
 	width: 200px;
 	padding: 20px;
+	background-color: #0d8bf2;
+	color: #000000;
+	font-family: cursive;
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Autosuggestion.css';
 
 /*const suggestions = [
@@ -38,27 +38,15 @@ import './Autosuggestion.css';
   { label: 'Brunei Darussalam' },
 ];*/
 
-class Autosuggestion extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-      locationName: ''
-		};
-	}
-
-  /*onInputChange = (event) => {
-    // this.setState({locationName: event.target.value});
-    this.props.onLocName(event.target.value);
-  };*/
-
-	render() {
-    const { onLocName } = this.props; 
-		return (
+const Autosuggestion = (props) => {
+  return (
 			<div className='autoSuggestion'>
-        <input type='text' className='inputText' placeholder='Enter location name...' onChange={ (event) => onLocName(event.target.value) }/>
+        <input type='text' 
+        className='inputText' 
+        placeholder='Enter location name...' 
+        onChange={ (event) => props.onLocationNameHandler(event.target.value) }/>
 			</div>
 		);
-	}
 }
 
 export default Autosuggestion;

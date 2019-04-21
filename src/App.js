@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import spacetime from 'spacetime';
 import Autosuggestion from './components/Autosuggestion/Autosuggestion';
+import CardClock from './components/CardClock/CardClock';
 import './App.css';
 
 const particleOptions = {
@@ -23,29 +24,42 @@ const particleOptions = {
   }
 };
 
+const initialState = {
+  locName: '',
+  cards: [],
+};
+
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      locName: '',
-    }
+    this.state = initialState;
   }
 
-  onLocName = (loc) => {
+  onLocationNameHandler = (loc) => {
     this.setState({locName: loc});
   };
 
   onAddClockClick = () => {
     console.log('Adding Clock', this.state.locName);
+    let cardArray = this.state.cards.concat(this.state.locName);
+    this.setState({cards: cardArray});
   };
 
   render() {
+    const { cards } = this.state;
     return (
       <div className='App'>
-        <Particles className='particles' params={particleOptions}/>
-        <Autosuggestion onLocName={this.onLocName}/>
-        <button className='butn' onClick={this.onAddClockClick}>Add Clock</button>
-        <h1>{spacetime.now().format('nice')}</h1>
+        <Particles className='particles' params={ particleOptions }/>
+        <Autosuggestion onLocationNameHandler={ this.onLocationNameHandler }/>
+        <button className='butn' onClick={ this.onAddClockClick }>Add Clock</button>
+        <h1>{ spacetime.now().format('nice') }</h1>
+        <div>
+          {
+          cards.map( (card, i) => {
+                return (<CardClock key={ card.split(' ').join('').concat(i+1) } location={ card } />);
+              })
+          }
+        </div>
       </div>
     );
   }
