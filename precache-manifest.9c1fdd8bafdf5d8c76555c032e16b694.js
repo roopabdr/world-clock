@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/world-clock/static/js/runtime~main.865c0e53.js"
   },
   {
-    "revision": "272dcad655b625a8e20e",
-    "url": "/world-clock/static/js/main.a8af3f47.chunk.js"
+    "revision": "6d359f219f6582b6749c",
+    "url": "/world-clock/static/js/main.fef61e20.chunk.js"
   },
   {
     "revision": "84a5b8104f1ba8f076c8",
     "url": "/world-clock/static/js/2.8ecebe91.chunk.js"
   },
   {
-    "revision": "272dcad655b625a8e20e",
-    "url": "/world-clock/static/css/main.188d9801.chunk.css"
+    "revision": "6d359f219f6582b6749c",
+    "url": "/world-clock/static/css/main.c974c52a.chunk.css"
   },
   {
-    "revision": "b1f26f30732a5f3e32f7f0f2714aa3b9",
+    "revision": "e3135c633181f3a79599ff84c6e37e0a",
     "url": "/world-clock/index.html"
   }
 ];
