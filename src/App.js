@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-import spacetime from 'spacetime';
 import Autosuggestion from './components/Autosuggestion/Autosuggestion';
 import CardClock from './components/CardClock/CardClock';
 import './App.css';
@@ -52,8 +51,7 @@ class App extends Component {
         <Particles className='particles' params={ particleOptions }/>
         <Autosuggestion onLocationNameHandler={ this.onLocationNameHandler }/>
         <button className='butn' onClick={ this.onAddClockClick }>Add Clock</button>
-        <h1>{ spacetime.now().format('nice') }</h1>
-        <div>
+        <div className='cardList'>
           {
           cards.map( (card, i) => {
                 return (<CardClock key={ card.split(' ').join('').concat(i+1) } location={ card } />);
