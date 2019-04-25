@@ -12,6 +12,9 @@ const particleOptions = {
         enable: true,
         value_area: 200
       },
+    color: {
+        value: "#000000"
+      },
     line_linked: {
                     shadow: {
                       enable: true,
