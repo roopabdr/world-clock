@@ -1,13 +1,13 @@
 {
-  "main.css": "/world-clock/static/css/main.1dcc6d64.chunk.css",
-  "main.js": "/world-clock/static/js/main.fef61e20.chunk.js",
-  "main.js.map": "/world-clock/static/js/main.fef61e20.chunk.js.map",
+  "main.css": "/world-clock/static/css/main.fa2ff336.chunk.css",
+  "main.js": "/world-clock/static/js/main.52f0fdba.chunk.js",
+  "main.js.map": "/world-clock/static/js/main.52f0fdba.chunk.js.map",
   "runtime~main.js": "/world-clock/static/js/runtime~main.865c0e53.js",
   "runtime~main.js.map": "/world-clock/static/js/runtime~main.865c0e53.js.map",
   "static/js/2.8ecebe91.chunk.js": "/world-clock/static/js/2.8ecebe91.chunk.js",
   "static/js/2.8ecebe91.chunk.js.map": "/world-clock/static/js/2.8ecebe91.chunk.js.map",
   "index.html": "/world-clock/index.html",
-  "precache-manifest.aecb3ed44f0616011cedd3565cc29835.js": "/world-clock/precache-manifest.aecb3ed44f0616011cedd3565cc29835.js",
+  "precache-manifest.1ab0a59a15dfc52581ad11613869f93b.js": "/world-clock/precache-manifest.1ab0a59a15dfc52581ad11613869f93b.js",
   "service-worker.js": "/world-clock/service-worker.js",
-  "static/css/main.1dcc6d64.chunk.css.map": "/world-clock/static/css/main.1dcc6d64.chunk.css.map"
+  "static/css/main.fa2ff336.chunk.css.map": "/world-clock/static/css/main.fa2ff336.chunk.css.map"
 }
