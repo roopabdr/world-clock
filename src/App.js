@@ -39,6 +39,8 @@ class App extends Component {
 
   onLocationNameHandler = (loc) => {
     this.setState({locName: loc});
+    // document.getElementById('listing').classList.add('showlist');
+
   };
 
   onAddClockClick = () => {
@@ -52,8 +54,10 @@ class App extends Component {
     return (
       <div className='App'>
         <Particles className='particles' params={ particleOptions }/>
-        <Autosuggestion onLocationNameHandler={ this.onLocationNameHandler }/>
-        <button className='butn' onClick={ this.onAddClockClick }>Add Clock</button>
+        {/* <div className='autosuggestion center'> */}
+          <Autosuggestion onLocationNameHandler={ this.onLocationNameHandler }/>
+          <button className='butn' onClick={ this.onAddClockClick }>Add Clock</button>
+        {/* </div> */}
         <div className='cardList'>
           {
           cards.map( (card, i) => {

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import './Autosuggestion.css';
 
-/*const suggestions = [
+const suggestions = [
   { label: 'Afghanistan' },
   { label: 'Aland Islands' },
   { label: 'Albania' },
@@ -36,17 +36,62 @@ import './Autosuggestion.css';
   { label: 'Brazil' },
   { label: 'British Indian Ocean Territory' },
   { label: 'Brunei Darussalam' },
-];*/
+];
 
-const Autosuggestion = (props) => {
-  return (
-			<div className='autoSuggestion'>
-        <input type='text' 
-        className='inputText' 
-        placeholder='Enter location name...' 
-        onChange={ (event) => props.onLocationNameHandler(event.target.value) }/>
-			</div>
-		);
+class Autosuggestion extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      listItem: '',
+      showSuggestion: false,
+    };
+  }
+
+  render() {
+    const { onLocationNameHandler } = this.props;
+    const { listItem, showSuggestion } = this.state;
+    return (
+        <Fragment>
+          
+          <input type='text' 
+          className='inputText' 
+          placeholder='Enter location name...' 
+          onChange={ (event) => { this.setState({listItem: event.target.value, showSuggestion: true}); return onLocationNameHandler(event.target.value) } }/>
+          {/* <div className='autosuggestion'>
+          <ul id='listing' className='suggestions'>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+            <li>five</li>
+            <li>six</li>
+            <li>seven</li>
+            <li>eight</li>
+            <li>nine</li>
+            <li>ten</li>
+          </ul>
+          </div> */}
+          { 
+            showSuggestion === true && listItem !== '' ? 
+              <div className='autosuggestion suggestions'>
+              <ul className={ showSuggestion ? "showlist" : null }>
+              {
+                suggestions.filter((filterItem) => {
+                  return filterItem.label.includes(listItem)
+                }).map((mapItem) => {
+                  return (
+                    <li key={ mapItem.label }>{ mapItem.label }</li>
+                  )
+                })
+              }
+              </ul>
+              </div>
+            : null            
+          }   
+        </Fragment>
+      );
+    }
 }
 
 export default Autosuggestion;

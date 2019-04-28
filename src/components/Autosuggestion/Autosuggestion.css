@@ -11,7 +11,7 @@
           0 0 16px rgba(0,0,0,0.1); 
   padding: 15px;
   background: rgba(255,255,255,0.3);
-  margin: 0 0 10px 0;
+  margin: 0 10px 10px 0;
   width: 60%;
   border-radius: 5rem;
   margin: 5px;
@@ -26,4 +26,33 @@
 .inputText:focus {
   border: 5px solid #0b7dda;
   outline: none;
+}
+
+.autosuggestion {
+  position: absolute;
+  z-index: -1;
+}
+
+.suggestions {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  visibility: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.suggestions ul{
+  list-style-type: none;
+}
+
+.showlist {
+  visibility: visible;
+}
+
+.suggestions li {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 0.5px solid #888;
+  width: 60%;
 }

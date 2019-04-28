@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  margin: 1rem;
+  margin: 1rem;  
 }
 
 .center {
@@ -15,14 +15,6 @@
   left: 0;
   right: 0;
   z-index: -1;
-  /* background: #000000; */
-  background: #2196F3;
-}
-
-.halfCircle{ /*not used right now*/
-  height: 50rem;
-  width: 97rem;
-  border-radius: 0px 0px 600px 600px;
   background: #2196F3;
 }
 
@@ -33,22 +25,18 @@
 }
 
 .butn {
-  /* background: #3498db;
-  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(top, #3498db, #2980b9);
-  background-image: linear-gradient(to bottom, #3498db, #2980b9); */
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   color: #000000;
   font-size: 16px;
-  padding: 10px 20px 10px 20px;
+  padding: 15px 20px 15px 20px;
   text-decoration: none;
   border: 1px solid #0d8bf2 !important;
   margin: 3px;
+  width: 10rem;
+  position: absolute;
 }
 
 .butn:hover {
