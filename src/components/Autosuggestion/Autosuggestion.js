@@ -75,13 +75,13 @@ class Autosuggestion extends Component {
           { 
             showSuggestion === true && listItem !== '' ? 
               <div className='autosuggestion suggestions'>
-              <ul className={ showSuggestion ? "showlist" : null }>
+              <ul>
               {
                 suggestions.filter((filterItem) => {
                   return filterItem.label.includes(listItem)
                 }).map((mapItem) => {
                   return (
-                    <li key={ mapItem.label }>{ mapItem.label }</li>
+                    <li key={ mapItem.label }  className={ showSuggestion ? "showlist" : null }>{ mapItem.label }</li>
                   )
                 })
               }
