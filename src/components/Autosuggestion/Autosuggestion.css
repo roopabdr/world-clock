@@ -12,7 +12,7 @@
   padding: 15px;
   background: rgba(255,255,255,0.3);
   margin: 0 10px 10px 0;
-  width: 60%;
+  width: 55% !important;
   border-radius: 5rem;
   font-size: 16px;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
@@ -36,17 +36,15 @@
   /* visibility: hidden; */
   position: absolute;
   z-index: 100;
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 20px;
 }
 
 .suggestions div{
   list-style-type: none;
-  /* margin-right: 65px; */
-  /* margin-top: -15px; */
-  /* border: 1px solid black; */
   border-radius: 5rem;
   width: 70%;
   display: flex;
