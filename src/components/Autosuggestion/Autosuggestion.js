@@ -53,7 +53,6 @@ class Autosuggestion extends Component {
     const { listItem, showSuggestion } = this.state;
     return (
         <Fragment>
-          
           <input type='text' 
           className='inputText' 
           placeholder='Enter location name...' 
@@ -61,17 +60,17 @@ class Autosuggestion extends Component {
           { 
             showSuggestion === true && listItem !== '' ? 
               <div className='autosuggestion suggestions'>
-              <div>
-              {
-                suggestions.filter((filterItem) => {
-                  return filterItem.label.includes(listItem)
-                }).map((mapItem) => {
-                  return (
-                    <span key={ mapItem.label }  className={ showSuggestion ? "showlist" : null }>{ mapItem.label }</span>
-                  )
-                })
-              }
-              </div>
+                <div>
+                {
+                  suggestions.filter((filterItem) => {
+                    return filterItem.label.includes(listItem)
+                  }).map((mapItem) => {
+                    return (
+                      <span key={ mapItem.label }  className={ showSuggestion ? "showlist" : null }>{ mapItem.label }</span>
+                    )
+                  })
+                }
+                </div>
               </div>
             : null            
           }   

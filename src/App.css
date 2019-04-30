@@ -36,7 +36,7 @@
   border: 1px solid #0d8bf2 !important;
   margin: 3px;
   width: 10rem;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .butn:hover {

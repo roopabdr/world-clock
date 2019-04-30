@@ -54,10 +54,10 @@ class App extends Component {
     return (
       <div className='App'>
         <Particles className='particles' params={ particleOptions }/>
-        {/* <div className='autosuggestion center'> */}
+        <div className='parent'>
           <Autosuggestion onLocationNameHandler={ this.onLocationNameHandler }/>
           <button className='butn' onClick={ this.onAddClockClick }>Add Clock</button>
-        {/* </div> */}
+        </div>
         <div className='cardList'>
           {
           cards.map( (card, i) => {
